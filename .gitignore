@@ -1,0 +1,12 @@
+node_modules
+build
+dist
+.vite
+
+# OS / editor
+.DS_Store
+*.log
+
+# Local env
+.env
+.env.local
