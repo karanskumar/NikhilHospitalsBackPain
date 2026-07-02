@@ -4,10 +4,10 @@
   import tailwindcss from '@tailwindcss/vite';
   import path from 'path';
 
-  export default defineConfig(({ command }) => ({
-    // Served from https://<user>.github.io/NikhilHospitalsBackPain/ in production,
+  export default defineConfig(() => ({
+    // Served from the root of the custom domain (spinecare.nikhilhospitals.com)
     // and from the root during local dev.
-    base: command === 'build' ? '/NikhilHospitalsBackPain/' : '/',
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
