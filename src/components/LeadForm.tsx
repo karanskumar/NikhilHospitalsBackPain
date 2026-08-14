@@ -21,6 +21,11 @@ export function LeadForm() {
     setSubmitted(true);
     toast.success('Thank you! Our spine care team will contact you shortly.');
 
+    // Meta Pixel — count this submission as a Lead conversion
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
+
     // Send the lead to the Google Sheet (skipped until the URL is set)
     if (SHEET_ENDPOINT && !SHEET_ENDPOINT.includes('PASTE_YOUR')) {
       try {
